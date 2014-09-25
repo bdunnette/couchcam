@@ -1,0 +1,11 @@
+<input type="text" ng-model="newentry.accessionNo" ng-change="updateAccessionNo()">
+<p>
+
+  <img ng-src="{{mySnapshot}}" class="pull-right">
+  <ng-camera type="photo" enabled="true" width="640" height="480" ng-model="myPhoto" capture="capturePhoto(myPhoto)"></ng-camera>
+</p>
+<div class="row">
+  <span ng-repeat="(name, info) in newentry._attachments">
+    <img  ng-src="/cam/{{$parent.newentry._id}}/{{name}}" />
+  </span> 
+</div>

@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date/Time</th>
+      <th>Accession Number</th>
+      <th>Images</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in camdb.rows | orderBy:'key':true">
+      <td>{{ row.key | date:'medium' }}</td>
+      <td>{{ row.doc.accessionNo }}</td>
+      <td>{{ row.doc._attachments }}</td>
+    </tr>
+  </tbody>
+</table>
